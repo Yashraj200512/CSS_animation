@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .button {
+
+            width: 120px;
+            height: 55px;
+            border-radius: 20px;
+            font-size: 20px;
+            color: #382b22;
+            font-family: sans-serif;
+            border: 0;
+            cursor: pointer;
+            background-color: #fff0f0;
+            border-bottom: 7px solid #f9c4d2;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+
+        .button:hover {
+            box-shadow: 0 0 20px 3px #ffb3d9;
+            transform: scale(1.00);
+
+        }
+
+
+        .button:active {
+
+            border-bottom: none;
+            box-shadow: none;
+            transform: translateY(7px);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="button">Button</button>
+</body>
+
+</html>
