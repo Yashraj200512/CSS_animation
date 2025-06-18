@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skip button Animation 2</title>
+    <script src="https://kit.fontawesome.com/18f3752d87.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Required to center vertically */
+            margin: 0;
+             background-color: rgb(154, 154, 154);
+        }
+
+        i {
+            position: relative;
+            display: inline-block;
+            font-size: 50px;
+            color: rgb(137, 136, 136);
+            border: 5px solid rgb(179, 179, 179);
+           
+            border-radius: 15px;
+            width: 70px;
+            height: 50px;
+            text-align: center;
+            box-shadow: 4px 3px rgb(42, 42, 42);
+            text-shadow: 2px 3px rgb(76, 76, 76);
+            background-color: rgb(179, 179, 179);
+
+
+
+        }
+
+        svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 15px;
+           overflow: visible;
+
+        }
+
+        .path {
+            fill: none;
+            stroke: blue;
+            stroke-width: 3;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            transition: stroke-dashoffset 0.3s ease;
+           animation: border 2s linear 1;
+        }
+
+       @keyframes border{
+        0%{
+  stroke-dashoffset: 200;
+        }
+        100%{
+  stroke-dashoffset: 0;
+    
+
+        }
+       }
+    </style>
+
+</head>
+
+<body>
+
+
+
+
+
+    <i class="fa-solid fa-angles-right">
+
+
+        <svg viewBox="0 0 70 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+
+            <path class="path" d="M-3 27
+                     v17
+                     a13 13 0 0 0 10 10
+                     h55
+                     a13 13 0 0 0 12 -11
+                     v-13"></path>
+ <path d="M-3 27 
+         v-15 a14 14 0 0 1 15 -15.3 h48 a15 15 0 0 1 14 14 v19" class="path"></path>
+
+
+        </svg>
+    </i>
+
+
+</body>
+
+</html>
