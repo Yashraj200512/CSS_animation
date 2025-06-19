@@ -14,7 +14,10 @@
             height: 100vh;
             /* Required to center vertically */
             margin: 0;
-             background-color: rgb(154, 154, 154);
+            background-color: rgb(154, 154, 154);
+           animation: button 0s 1.35s steps(1, end) forwards;
+          
+
         }
 
         i {
@@ -23,15 +26,16 @@
             font-size: 50px;
             color: rgb(137, 136, 136);
             border: 5px solid rgb(179, 179, 179);
-           
+
             border-radius: 15px;
             width: 70px;
             height: 50px;
             text-align: center;
-            box-shadow: 4px 3px rgb(42, 42, 42);
+            box-shadow: 4px 3px rgb(79, 79, 79);
             text-shadow: 2px 3px rgb(76, 76, 76);
             background-color: rgb(179, 179, 179);
-
+            animation: button2 0.4s 1.4s  1 forwards;
+          
 
 
         }
@@ -43,32 +47,90 @@
             height: 100%;
             width: 100%;
             border-radius: 15px;
-           overflow: visible;
+            overflow: visible;
 
         }
 
         .path {
             fill: none;
-            stroke: blue;
+            stroke: rgb(48, 255, 255);
             stroke-width: 3;
             stroke-linejoin: round;
             stroke-linecap: round;
             stroke-dasharray: 200;
             stroke-dashoffset: 200;
             transition: stroke-dashoffset 0.3s ease;
-           animation: border 2s linear 1;
+            animation: border 2s linear 1,hideStroke 0s 1.35s steps(1, end) forwards;
+          
         }
 
-       @keyframes border{
-        0%{
-  stroke-dashoffset: 200;
+        @keyframes border {
+            0% {
+                stroke-dashoffset: 200;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+
+
+            }
         }
-        100%{
-  stroke-dashoffset: 0;
-    
+
+        @keyframes button {
+            to {
+                background-color: rgb(0, 0, 0);
+           
+            
+            }}
+             @keyframes button2 {
+            to {
+               
+               
+               transform: scale(1.17) ;
+               font-size: 40px;
+               text-align: center;
+            border: 0;
+           
+           
+            
+            }
+            
 
         }
-       }
+        
+@keyframes hideStroke {
+  to {
+    opacity: 0;
+  }
+}
+
+
+i:active{
+       box-shadow: 2px 2px 2px rgb(79, 79, 79);
+       margin-top: 10px;
+       margin-left: 10px;
+
+}
+@keyframes rainbowBG {
+  0% { background-color: red; 
+
+}
+  16% { background-color: orange; }
+  33% { background-color: yellow; }
+  50% { background-color: green; }
+  66% { background-color: blue; }
+  83% { background-color: indigo; }
+  100% { background-color: violet; }
+}
+
+i:hover {
+  animation: rainbowBG 2s linear infinite;
+  border: 0;
+  transform: scale(1.25);
+  font-size: 43px;
+  line-height: 45px;
+}
+
     </style>
 
 </head>
@@ -90,7 +152,7 @@
                      h55
                      a13 13 0 0 0 12 -11
                      v-13"></path>
- <path d="M-3 27 
+            <path d="M-3 27 
          v-15 a14 14 0 0 1 15 -15.3 h48 a15 15 0 0 1 14 14 v19" class="path"></path>
 
 
